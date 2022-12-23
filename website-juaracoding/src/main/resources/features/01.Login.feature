@@ -22,16 +22,16 @@ Feature: Login User
 		And User klik button login
     Then gagal masuk username salah
     
-    #Scenario: User input password salah
-    #When User input password salah
-#		And klik button login
-    #Then gagal masuk password salah
+    Scenario: User input password salah
+    When User input password salah
+		And klik button login
+    Then gagal masuk password salah
     
-    #Scenario: User input username Uppercase
-    #When User enter username uppercase and password Valid
-#		And User click button login valid
-    #And User berhasil Login
-    #Then User click Logout
+    Scenario: User input username Uppercase
+    When User enter username uppercase and password Valid
+		And User klik login
+    And User berhasil Login
+    Then User click Logout
     
     Scenario: User valid login
     When User enter username password valid

@@ -110,65 +110,61 @@ public class TestLogin {
 			}
 			@Then("gagal masuk username salah")
 			public void gagal_masuk_username_salah() {
-				AssertJUnit.assertEquals(loginPage.getTxtErrorLogin(), "username Atau Password Kosong");
-				Assert.assertTrue(loginPage.getTxtErrorMessage().contains("username Atau Password Kosong"));
-				extentTest.log(LogStatus.PASS, "User invalid credentials password");
+				AssertJUnit.assertEquals(loginPage.getTxtErrorMessage(), "Username Atau Password Salah");
+				Assert.assertTrue(loginPage.getTxtErrorMessage().contains("Username Atau Password Salah"));
+				extentTest.log(LogStatus.PASS, "User invalid credentials username");
 			}
 			
 //			Test Case 5
 			
-//			@When("User input password salah")
-//			public void user_input_password_salah() throws InterruptedException {
-//				 driver.navigate().refresh();
-//				loginPage.login("ucen1315@gmail.com", "A");
-//				extentTest.log(LogStatus.PASS, "User input password salah");
-//			}
-//			@And("klik button login")
-//			public void klik_button_login() throws InterruptedException {
-//				loginPage.clickBtnLogin();
-//				  extentTest.log(LogStatus.PASS, "klik button login");
-//			}
-//			@Then("gagal masuk password salah")
-//			public void gagal_masuk_password_salah() throws InterruptedException {
-//				AssertJUnit.assertEquals(loginPage.getTxtErrorMessage(), "Username Atau Password Salah");
-//				Assert.assertTrue(loginPage.getTxtErrorMessage().contains("username Atau Password Salah"));
-//				extentTest.log(LogStatus.PASS, "gagal masuk password salah");
-//			}
+			@When("User input password salah")
+			public void user_input_password_salah() throws InterruptedException {
+				 driver.navigate().refresh();
+				loginPage.login("ucen1315@gmail.com", "A");
+				extentTest.log(LogStatus.PASS, "User input password salah");
+			}
+			@And("klik button login")
+			public void klik_button_login() throws InterruptedException {
+				loginPage.clickBtnLogin();
+				  extentTest.log(LogStatus.PASS, "klik button login");
+			}
+			@Then("gagal masuk password salah")
+			public void gagal_masuk_password_salah() throws InterruptedException {
+				AssertJUnit.assertEquals(loginPage.getTxtErrorMessage(), "Username Atau Password Salah");
+				Assert.assertTrue(loginPage.getTxtErrorMessage().contains("Username Atau Password Salah"));
+				extentTest.log(LogStatus.PASS, "gagal masuk password salah");
+			}
 						
 			
 //			Test Case 6
 			
-//			@When("User enter username uppercase and password Valid")
-//			public void user_enter_username_upercase_and_password_valid() throws InterruptedException {
-//				 driver.navigate().refresh();
-//				  loginPage.login("ucen1315@gmail.com", "a");
-//				  extentTest.log(LogStatus.PASS, "User enter username uppercase and password Valid");			  
-//				  }
-//			
-//			@And("User klik button login")
-//			public void user_klik_button_login() throws InterruptedException {
-//			  loginPage.clickBtnLogin();
-//			  extentTest.log(LogStatus.PASS, "User click button login");
-//			}
-//			
-//			@When("User berhasil Login")
-//			public void user_berhasil_login() {
-//				AssertJUnit.assertEquals(loginPage.getTxtDashboard(), "Dashboard");
-//				Assert.assertTrue(loginPage.getTxtDashboard().contains("Dashboard"));
-//				extentTest.log(LogStatus.PASS, "User valid credentials");
-//			}
-//			@Then("User click Logout")
-//			public void user_click_logout() throws InterruptedException {
-//				loginPage.hold();
-//				loginPage.clickBtnLogout();
-//				  extentTest.log(LogStatus.PASS, "User click button logout");
-//			}
+			@When("User enter username uppercase and password Valid")
+			public void user_enter_username_uppercase_and_password_valid() throws InterruptedException {
+				loginPage.login("UCEN1315@GMAIL.COM", "a");
+				  extentTest.log(LogStatus.PASS, "User enter username uppercase and password Valid");
+			}
+			@And("User klik login")
+			public void user_klikbutton_login() throws InterruptedException {
+			  loginPage.clickBtnLogin();
+			  extentTest.log(LogStatus.PASS, "User klik login");
+			}
+			@When("User berhasil Login")
+			public void user_berhasil_login() {
+				AssertJUnit.assertEquals(loginPage.getTxtDashboard(), "Dashboard");
+				Assert.assertTrue(loginPage.getTxtDashboard().contains("Dashboard"));
+				extentTest.log(LogStatus.PASS, "User berhasil Login");
+			}
+			@Then("User click Logout")
+			public void user_click_logout() throws InterruptedException {
+				loginPage.hold();
+				loginPage.clickBtnLogout();
+				  extentTest.log(LogStatus.PASS, "User click Logout");
+			}
 
 //			Test Chase 7
 			
 			@When("User enter username password valid")
 			public void user_enter_username_password_valid() throws InterruptedException {
-				 driver.navigate().refresh();
 			  loginPage.login("ucen1315@gmail.com", "a");
 			  extentTest.log(LogStatus.PASS, "User enter username password valid");
 			}

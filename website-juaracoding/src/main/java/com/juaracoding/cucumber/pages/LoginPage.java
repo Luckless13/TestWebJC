@@ -31,13 +31,13 @@ public class LoginPage {
     @FindBy(xpath = "/html/body/div[3]/div/div[6]/button[1]")
     WebElement btnOk;
     
-    @FindBy(xpath = "/html/body/div[3]/div/div[6]/button[1]")
+    @FindBy(xpath = "//*[@id=\"pageWrapper\"]/div[1]/div/div[3]/ul/li[2]/div")
     WebElement hold;
 
     @FindBy(xpath = "//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[2]/a/span")
     WebElement txtDashboard;
     
-    @FindBy(xpath  = "//*[@class=\"jc-login-wrap\"]/p")
+    @FindBy(xpath  = "//p[@class='alert alert-warning']")
     WebElement txtErrorMessage;
 
     @FindBy(xpath = "//*[@id=\"swal2-html-container\"]")
@@ -67,7 +67,7 @@ public class LoginPage {
     public void hold() throws InterruptedException{
     	Thread.sleep(2000);
         Actions actions = new Actions(driver); 
-        actions.clickAndHold(hold).perform(); 
+        actions.moveToElement(hold).perform(); 
     }
     
     public String getTxtDashboard() {
