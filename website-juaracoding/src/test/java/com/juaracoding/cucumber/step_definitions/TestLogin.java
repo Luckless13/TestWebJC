@@ -119,7 +119,7 @@ public class TestLogin {
 			
 			@When("User input password salah")
 			public void user_input_password_salah() throws InterruptedException {
-				 driver.navigate().refresh();
+				driver.navigate().refresh();
 				loginPage.login("ucen1315@gmail.com", "A");
 				extentTest.log(LogStatus.PASS, "User input password salah");
 			}
