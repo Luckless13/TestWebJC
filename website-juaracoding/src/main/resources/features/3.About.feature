@@ -6,8 +6,7 @@ Scenario: Tampilan form about
 			Then Berada di form about
 			
 Scenario: Tambah data trainer baru
-			When Berada di form about
-			And Klik button tambah
+			When Klik button tambah
 			And Klik choose file pilih foto
 			And Isi nama trainer
 			And Isi jabatan trainer

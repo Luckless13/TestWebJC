@@ -82,9 +82,9 @@ public class TestSosialMedia {
     }
     @Then("Berhasil disimpan")
     public void berhasil_disimpan() {
-//    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
-//    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
-////    	Assert.assertEquals(sosialMediaPage.getTxtSosialMedia(), "Social Media");
+    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
+    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+//    	Assert.assertEquals(sosialMediaPage.getTxtSosialMedia(), "Social Media");
         extentTest.log(LogStatus.PASS, "Berhasil disimpan");
     }
    }

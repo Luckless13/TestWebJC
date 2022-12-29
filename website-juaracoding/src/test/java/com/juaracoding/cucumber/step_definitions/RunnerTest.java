@@ -4,7 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(tags = "",
-        features = {"src/main/resources/features/01.Login.feature",
+        features = {
+//        		"src/main/resources/features/01.Login.feature",
 //        		"src/main/resources/features/2.SosialMedia.feature"},
         		"src/main/resources/features/3.About.feature"},
         glue = "com.juaracoding.cucumber.step_definitions",

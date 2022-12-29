@@ -65,6 +65,7 @@ public class SosialMediaPage {
 	 @FindBy(xpath = "//*[@id=\"frmregister\"]/alert")
 	 WebElement txtUpdate;
 	 
+	 
 	 public void facebook(String inputFacebook){
 	        this.inputFacebook.sendKeys(inputFacebook);
 	    }
