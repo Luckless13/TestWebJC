@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AboutPage {
 	
-	private static final JavascriptExecutor driver = null;
 
 	@FindBy(xpath= "//span[normalize-space()='About']")
     WebElement btnAbout;
@@ -36,10 +35,11 @@ public class AboutPage {
 	@FindBy (xpath = "//input[@name='mysubmit']")
 	WebElement btnSimpan;
 	
-	@FindBy (xpath = "//alert[@class='alert alert-success']")
-	 WebElement txtSuccess;
-	 
-	 public void klikBtnAbout(){
+	@FindBy (xpath = "//*[@id=\"pageWrapper\"]/div[2]/div[2]/div[2]/div/div/div/alert")
+	WebElement txtSuccess;
+	
+	 public void klikBtnAbout()throws InterruptedException {
+		    Thread.sleep(1000);
 			btnAbout.click();	
 		}
 	 
@@ -67,12 +67,10 @@ public class AboutPage {
 	 }
 	 
 	 public void klikBtnSimpan(){
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("arguments[0].click();",btnSimpan);
 	        btnSimpan.click();
 	    }
 	 
 	 public String getTxtSuccess() {
 	    	return txtSuccess.getText();
-	    }
+	 }
 }

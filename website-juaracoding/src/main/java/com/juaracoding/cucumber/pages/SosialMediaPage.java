@@ -69,14 +69,29 @@ public class SosialMediaPage {
 	 public void facebook(String inputFacebook){
 	        this.inputFacebook.sendKeys(inputFacebook);
 	    }
+	 public void facebookHapus(){
+	        this.inputFacebook.clear();
+	    }
+
 	 public void instagram(String inputInstagram){
 	        this.inputInstagram.sendKeys(inputInstagram);
 	    }
+	 public void instagramHapus(){
+	        this.inputInstagram.clear();
+	    }
+	 
 	 public void youtube(String inputYoutube){
 	        this.inputYoutube.sendKeys(inputYoutube);
 	    }
+	 public void youtubeHapus(){
+	        this.inputYoutube.clear();
+	    }
+	 
 	 public void whatsapp(String inputWhatsapp){
 	        this.inputWhatsapp.sendKeys(inputWhatsapp);
+	    }
+	 public void whatsappHapus(){
+	        this.inputWhatsapp.clear();
 	    }
 	 public void clickBtnSimpan(){
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -85,5 +100,19 @@ public class SosialMediaPage {
 	    }
 	 public String getTxtUpdate() {
 	    	return txtUpdate.getText();
+	    }
+	 
+	 //test case null
+	 @FindBy (xpath = "//*[@id=\"frmregister\"]/div[2]/div/div[1]/div/div[2]")
+	 WebElement txtFacebook;
+	 
+	 @FindBy (xpath = "//*[@id=\"frmregister\"]/div[2]/div/div[4]/div/div[2]")
+	 WebElement txtWa;
+	 
+	 public String getTxtFacebook() {
+	    	return txtFacebook.getText();
+	    }
+	 public String getTxtWa() {
+	    	return txtWa.getText();
 	    }
 }

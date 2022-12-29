@@ -1,12 +1,13 @@
 Feature: Form about
 
 Scenario: Tampilan form about
-			When Berada di dashboard
+      When Go to web
 			And Klik about
 			Then Berada di form about
 			
 Scenario: Tambah data trainer baru
-			When Klik button tambah
+			When Berada di halaman about
+			And Klik button tambah
 			And Klik choose file pilih foto
 			And Isi nama trainer
 			And Isi jabatan trainer

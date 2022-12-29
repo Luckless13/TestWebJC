@@ -28,20 +28,20 @@ public class TestAbout {
     }
     
   //Test case 1
-    @When("Berada di dashboard")
-    public void berada_di_dashboard() {
+    @When("Go to web")
+    public void Go_to_web() {
     	driver.get(Constants.URL);
-        extentTest.log(LogStatus.PASS, "Berada di dashboard");
         WebElement uname = driver.findElement(By.xpath("//*[@id=\"username\"]")); 
 		uname.sendKeys("ucen1315@gmail.com");
 		WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
 		password.sendKeys("a");
 		WebElement login = driver.findElement(By.xpath("//*[@id=\"frmlogin\"]/div[3]/button"));
 		login.click();
+		extentTest.log(LogStatus.PASS, "Go to web");
     }
     
 	@When("Klik about")
-	public void klik_about() {
+	public void klik_about() throws InterruptedException {
 		aboutPage.klikBtnAbout();
         extentTest.log(LogStatus.PASS, "Klik about");
 	}
@@ -52,7 +52,11 @@ public class TestAbout {
 	}
 	
 	//Test case 2
-	
+	@When("Berada di halaman about")
+	public void Berada_di_halaman_about() {
+		Assert.assertEquals(aboutPage.getTxtTrainer(), "List Trainer");
+        extentTest.log(LogStatus.PASS, "Berada di halaman about");
+	}
 	@And("Klik button tambah")
 	public void klik_button_tambah() {
 	    aboutPage.klikBtnTambah();
@@ -85,7 +89,7 @@ public class TestAbout {
 		aboutPage.selectPublish(0);
     	extentTest.log(LogStatus.PASS, "Publish aktive");
 	}
-	@When("Klik simpan")
+	@And("Klik simpan")
 	public void klik_simpan() {
 		aboutPage.klikBtnSimpan();
         extentTest.log(LogStatus.PASS, "Klik simpan");
