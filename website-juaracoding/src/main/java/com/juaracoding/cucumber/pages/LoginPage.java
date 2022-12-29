@@ -45,27 +45,27 @@ public class LoginPage {
     
     public void login(String username, String password) throws InterruptedException{
         this.username.sendKeys(username);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         this.password.sendKeys(password);
     }
 
     public void clickBtnLogin() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
         btnLogin.click();
     }
     
     public void clickBtnLogout() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
         btnLogout.click();
     }
     
     public void clickBtnOk() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
         btnOk.click();
     }
     
     public void hold() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
         Actions actions = new Actions(driver); 
         actions.moveToElement(hold).perform(); 
     }
@@ -82,6 +82,6 @@ public class LoginPage {
     	return txtErrorLogin.getText();
     }
 
-
+    
 
 }
