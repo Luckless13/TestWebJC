@@ -68,7 +68,7 @@ public class TestTestimonial {
 
 	@And("Click choose file null")
 	public void click_choose_file_null() throws InterruptedException {
-    	extentTest.log(LogStatus.PASS, "Click choose file null");
+    	extentTest.log(LogStatus.PASS, "Choose file null");
 	}
 
 	@And("Input nama peserta testimonial null")
@@ -382,8 +382,8 @@ public class TestTestimonial {
 //
 //	@When("Select rating")
 //	public void select_rating() throws InterruptedException {
-//		testimonialPage.selectPublish(0);
-//    	extentTest.log(LogStatus.PASS, "Select publish status");
+//		testimonialPage.selectRating(5);
+//		extentTest.log(LogStatus.PASS, "Select rating");
 //	}
 //
 //	@When("Click simpan")

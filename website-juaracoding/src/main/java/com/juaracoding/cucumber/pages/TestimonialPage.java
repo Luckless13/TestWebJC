@@ -1,5 +1,6 @@
 package com.juaracoding.cucumber.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,7 +46,7 @@ public class TestimonialPage {
 	    @FindBy(xpath = "//select[@id='rating']")
 	    WebElement rating;
 	    
-	    @FindBy(xpath = "//input[@name='mysubmit']")
+	    @FindBy(xpath = "//input[@name='mysubmit']") 
 	    WebElement btnSimpan;
 	    
 	    @FindBy(xpath = "//*[@id=\"frmadd\"]/div[2]/div/div[2]/div/div")
@@ -59,6 +60,46 @@ public class TestimonialPage {
 	    
 	    @FindBy(xpath = "//div[@class='header']//p[1]")
 	    WebElement txtnotsupport;
+	    
+	    @FindBy(xpath = "//a[normalize-space()='2']")
+	    WebElement nextpage;
+	    
+	    @FindBy(xpath = "//li[@class='active page-item']")
+	    WebElement activepage;
+	    
+	    @FindBy(xpath = "//li[@class='page-item']")
+	    WebElement unactivepage;
+	    
+	    @FindBy(xpath = "//input[@placeholder='Search Nama Peserta']")
+	    WebElement search;
+	    
+	    @FindBy(xpath = "//p[normalize-space()='Test 13']")
+	    WebElement namayangdicari;
+	    
+	    @FindBy(xpath = "//input[@id='nama']")
+	    WebElement editnama;
+	    
+	    @FindBy(xpath = "//textarea[@id='summernote']")
+	    WebElement editcontent;
+	    
+	    @FindBy(xpath = "//input[@id='filename']")
+	    WebElement namafoto;
+	    
+	    @FindBy(xpath = "//input[@value='Pilih Gambar Ulang']")
+	    WebElement editfoto;
+	    
+	    @FindBy(xpath = "//select[@id='exampleFormControlSelect9']")
+	    WebElement editpublish;
+	    
+	    @FindBy(xpath = "//select[@id='rating']")
+	    WebElement editrating;
+	    
+	    @FindBy(xpath = "//*[@id=\"pageWrapper\"]/div[2]/div[2]/div[2]/div/div/div/form/div[2]/div/div[2]/div/div")
+	    WebElement NamaAlert;
+	    
+	    @FindBy(xpath = "//*[@id=\"pageWrapper\"]/div[2]/div[2]/div[2]/div/div/div/form/div[2]/div/div[4]/div/div")
+	    WebElement ContentAlert;
+	  
 	    
 		public void clickBtnHome() throws InterruptedException {
 			Thread.sleep(1000);
@@ -116,9 +157,6 @@ public class TestimonialPage {
 			Thread.sleep(1000);
 	        btnUpload.sendKeys(photo);
 		}
-//		 public void upload(String foto) throws InterruptedException{
-//	          this.foto.sendKeys(foto);
-//	    }
 
 		public String getTxt404() {
 			return txt404.getText();
@@ -128,5 +166,88 @@ public class TestimonialPage {
 			return txtnotsupport.getText();
 		}
 
+		public void clickNextpage() throws InterruptedException {
+			Thread.sleep(2000);
+	        nextpage.click();
+		}
+
+		public String getActivePage() {
+			return activepage.getAttribute("class");
+//			return nextpage.getText();
+		}
+
+		public void Search(String search) throws InterruptedException {
+			this.search.sendKeys(search);	
+		}
+
+		public void Enter() throws InterruptedException {
+			Thread.sleep(2000);
+	        search.sendKeys(Keys.ENTER);
+		}
+
+		public String getNamayangdicari() {
+			return namayangdicari.getText();
+		}
+
+		public String getUnActivePage() {
+			return unactivepage.getAttribute("class");
+		}
+
+		public void clickNamayangdicari() throws InterruptedException {
+			Thread.sleep(1000);
+	        namayangdicari.click();
+		}
+
+		public void ClearNama() throws InterruptedException {
+			Thread.sleep(1000);
+			this.editnama.clear();	
+		}
+		
+		public void ClearContent() throws InterruptedException {
+			Thread.sleep(1000);
+			this.editcontent.clear();
+		}
+		
+		public void EditNama(String editnama) throws InterruptedException {
+			Thread.sleep(1000);
+			this.editnama.sendKeys(editnama);	
+		}
+		
+		public void EditContent(String editcontent) throws InterruptedException {
+			Thread.sleep(1000);
+			this.editcontent.sendKeys(editcontent);	
+		}
+
+		public String getNamaAlert() {
+			return NamaAlert.getText();
+		}
+		
+		public String getContentAlert() {
+			return ContentAlert.getText();
+		}
+
+//		public void PilihGambarUlang(String photo) throws InterruptedException {
+//			Thread.sleep(1000);
+//	        namafoto.sendKeys(photo);
+//		}
+		
+		public void clickBtnPilihGambarUlang(String foto) throws InterruptedException {
+			Thread.sleep(1000);
+	        editfoto.sendKeys(foto); 
+		}
+
+		public void EditPublish(int index) throws InterruptedException {
+			Thread.sleep(1000);
+	        Select selectedPublish = new Select(editpublish);  
+			selectedPublish.selectByIndex(index);
+			
+		}
+
+		public void EditRating(int index) throws InterruptedException {
+			Thread.sleep(1000);
+	        Select selectedRating = new Select(editrating);  
+			selectedRating.selectByIndex(index);
+		}
+		
 
 }
