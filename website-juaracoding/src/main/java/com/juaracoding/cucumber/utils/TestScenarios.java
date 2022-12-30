@@ -34,8 +34,23 @@ public enum TestScenarios {
 	T24("Edit Testimonial nama null"),
 	T25("Edit Testimonial isi testimoninal null"),
 	T26("Edit Testimonial nama dan isi testimoial null"),
-//	T27("Edit Testimonial foto pdf"),
-	T28("Edit Testimonial");
+	T27("Edit Testimonial foto pdf");
+//	T28("Edit Testimonial");
+	
+//	Rincian Biaya Search
+//	T29("Berada di Page Rincian Biaya"),
+//	T30("Search nama program null"),
+//	T31("Search nama program lengkap dengan spasi dibelakang"),
+//	T32("Search nama depan program"),
+//	T33("Search nama belakang program"),
+//	T34("Search nama program lengkap"),
+//	T35("Search harga normal null"),
+//	T36("Search harga normal huruf"),
+//	T37("Search harga normal");
+//	T38("Search harga normal huruf"),
+//	T39("Search harga normal huruf"),
+//	T40("Search harga normal huruf");
+	
 	
     private String testName;
 
