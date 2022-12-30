@@ -20,8 +20,11 @@ public class BlogPage {
     @FindBy(xpath = "//span[normalize-space()='Blog']")
     WebElement btn_blog;
 
-    @FindBy(css= "li:nth-child(6) a:nth-child(1)")
+    @FindBy(xpath= "//li[6]//a[1]//*[name()='svg']//*[name()='line'][3]")
     WebElement btn_blog2;
+
+    @FindBy(linkText = "Blog")
+    WebElement btn_blog3;
 
     @FindBy(xpath = "//a[@class='btn btn-gradient']")
     WebElement btn_tambah;
@@ -38,7 +41,7 @@ public class BlogPage {
     @FindBy(xpath = "//h3[normalize-space()='List Blog']")
     WebElement txtlist;
 
-    @FindBy(xpath = "//h4[normalize-space()='contoh test']")
+    @FindBy(xpath = "//img[@alt='Image description']")
     WebElement listdata;
 
     @FindBy(xpath = "//h4[@class='card-title mb-0']")
@@ -56,10 +59,10 @@ public class BlogPage {
     @FindBy(xpath = "//input[@id='judul']")
     WebElement inputjudul;
 
-    @FindBy(xpath = "//*[@name=\"publish\"]")
+    @FindBy(id = "exampleFormControlSelect9")
     WebElement selectPublish;
 
-    @FindBy(xpath = "//*[@name=\"set_top\"]")
+    @FindBy(name ="set_top")
     WebElement selectsettohome;
 
     @FindBy(xpath = "//textarea[@name='body_preview']")
@@ -79,6 +82,11 @@ public class BlogPage {
     public void btnblog2() throws InterruptedException {
         Thread.sleep(1000);
         btn_blog2.click();
+    }
+
+    public void btnblog3() throws InterruptedException {
+        Thread.sleep(1000);
+        btn_blog3.click();
     }
 
 
@@ -134,16 +142,18 @@ public class BlogPage {
 
     }
 
+    public void judulHapus() {
+        this.inputjudul.clear();
+    }
+
     public void setselectPublish(int index) throws InterruptedException {
         Thread.sleep(1000);
-        Select selectedPublish = new Select(selectPublish);
-        selectedPublish.selectByIndex(index);
+        selectPublish.click();
     }
 
     public void setselecttohome(int index) throws InterruptedException {
         Thread.sleep(1000);
-        Select selectedPublish = new Select(selectsettohome);
-        selectedPublish.selectByIndex(index);
+        selectsettohome.click();
     }
 
     public void setInputcontent1(String inputcontent1) {
@@ -151,9 +161,16 @@ public class BlogPage {
 
     }
 
+    public void content1Hapus() {
+        this.inputcontent1.clear();
+    }
+
     public void setInputcontent2(String inputcontent2) {
         this.inputcontent2.sendKeys(inputcontent2);
 
+    }
+    public void content2Hapus() {
+        this.inputcontent2.clear();
     }
 
 

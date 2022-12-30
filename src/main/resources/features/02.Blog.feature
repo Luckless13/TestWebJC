@@ -32,9 +32,11 @@ Feature: Menu Blog
     And User Clik Simpan
     Then Data BerhasiL di tambah
 
-  Scenario: TCC002 Menu tambah invalid
-    When User click Blog Menu tc006
-    And User Click Tambah tc006
+  Scenario: TCC blog 002 Menu tambah blog invalid
+    When User berada di halaman tambah
+    And Kosongkan judul
+    And Kosongkan content preview
+    And Kosongkan content
     And User Clik Simpan tc006
     Then Data Tidak BerhasiL di tambah tc006
 
@@ -82,7 +84,7 @@ Feature: Menu Blog
     And User Clik Simpan tc010
     Then Data Tidak BerhasiL di tambah tc010
 
-  Scenario: TCC Blog 006 Menu Edit Blog invalid
+  Scenario: TCC Blog 007 Menu Edit Blog invalid
     When User click Blog Menu tc011
     And User Click List Blog tc011
     And User Select Active atau No Active tc011
