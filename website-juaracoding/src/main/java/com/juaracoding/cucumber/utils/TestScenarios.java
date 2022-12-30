@@ -9,7 +9,9 @@ public enum TestScenarios {
 	T6("Kosongkan link instagram"),
 	T7 ("Kosongkan link youtube"),
 	T8 ("Kosongkan nomor whatsapp"),
-	T9 ("Menambahkan akun sosial media");
+	T9 ("Menambahkan akun sosial media"),
+	T10("Tampilan form about"),
+	T11("Tambah data trainer baru");
 	
 
     private String testName;

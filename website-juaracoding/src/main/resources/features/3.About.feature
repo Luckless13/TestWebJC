@@ -1,7 +1,7 @@
 Feature: Form about
 
 Scenario: Tampilan form about
-      When Go to web
+      When Berada di halaman dashboard about
 			And Klik about
 			Then Berada di form about
 			

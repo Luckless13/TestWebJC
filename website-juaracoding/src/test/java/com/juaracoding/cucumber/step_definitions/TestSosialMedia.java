@@ -122,8 +122,9 @@ public class TestSosialMedia {
     }
     @Then("Gagal simpan data link instagram null")
     public void Gagal_simpan_data_link_instagram_null() {
-    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
-    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+//    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
+//    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+    	Assert.assertFalse(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
         extentTest.log(LogStatus.PASS, "Gagal simpan data link instagram null");
     }
     
@@ -158,8 +159,9 @@ public class TestSosialMedia {
     }
     @Then("Gagal simpan data yt null")
     public void Gagal_simpan_data_yt_null() {
-    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
-    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+//    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
+//    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+    	Assert.assertFalse(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
         extentTest.log(LogStatus.PASS, "Gagal simpan data yt null");
     }
     
@@ -186,6 +188,7 @@ public class TestSosialMedia {
     }
     @When("Klik button simpan wa null")
     public void Klik_button_simpan_wa_null() {
+    	Hooks.delay(2);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 

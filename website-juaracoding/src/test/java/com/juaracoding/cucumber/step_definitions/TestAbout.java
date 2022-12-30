@@ -28,16 +28,10 @@ public class TestAbout {
     }
     
   //Test case 1
-    @When("Go to web")
-    public void Go_to_web() {
-    	driver.get(Constants.URL);
-        WebElement uname = driver.findElement(By.xpath("//*[@id=\"username\"]")); 
-		uname.sendKeys("ucen1315@gmail.com");
-		WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
-		password.sendKeys("a");
-		WebElement login = driver.findElement(By.xpath("//*[@id=\"frmlogin\"]/div[3]/button"));
-		login.click();
-		extentTest.log(LogStatus.PASS, "Go to web");
+    @When("Berada di halaman dashboard about")
+    public void Berada_di_halaman_dashboard_about() {
+    	aboutPage.getTxtDashboard();
+        extentTest.log(LogStatus.PASS, "Berada di halaman dashboard about");
     }
     
 	@When("Klik about")

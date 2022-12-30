@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AboutPage {
 	
-
+	@FindBy(xpath = "//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[2]/a/span")
+    WebElement txtDashboard;
+	
 	@FindBy(xpath= "//span[normalize-space()='About']")
     WebElement btnAbout;
 	
@@ -37,6 +39,10 @@ public class AboutPage {
 	
 	@FindBy (xpath = "//*[@id=\"pageWrapper\"]/div[2]/div[2]/div[2]/div/div/div/alert")
 	WebElement txtSuccess;
+	
+	public String getTxtDashboard() {
+    	return txtDashboard.getText();
+    }
 	
 	 public void klikBtnAbout()throws InterruptedException {
 		    Thread.sleep(1000);
