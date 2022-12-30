@@ -24,6 +24,9 @@ public class BiayaPage {
     @FindBy(linkText = "Tambah")
     WebElement btn_tambah;
 
+    @FindBy(name = "mysubmit")
+    WebElement btn_simpan;
+
     @FindBy(id = "nama")
     WebElement inputnama;
 
@@ -32,6 +35,9 @@ public class BiayaPage {
 
     @FindBy(id = "diskonid")
     WebElement inputdiskon;
+
+    @FindBy(id = "exampleFormControlSelect9")
+    WebElement publish;
 
     @FindBy(name = "keunggulan1")
     WebElement inputunggul1;
@@ -48,9 +54,78 @@ public class BiayaPage {
     @FindBy(name = "keunggulan5")
     WebElement inputunggul5;
 
+    @FindBy(xpath = "//alert[@class='alert alert-success']")
+    WebElement txtberhasiltambah;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback'][normalize-space()='Harap isi nama program']")
+    WebElement txtgagaltambah;
 
 
 
+    public void btnhome() throws InterruptedException {
+        Thread.sleep(1000);
+        btn_home.click();
+    }
+
+    public void btnbiaya() throws InterruptedException {
+        Thread.sleep(1000);
+        btn_biaya.click();
+    }
+
+    public void btntambah() throws InterruptedException {
+        Thread.sleep(1000);
+        btn_tambah.click();
+    }
+
+    public void setPublish() throws InterruptedException {
+        Thread.sleep(1000);
+        publish.click();
+    }
+
+    public void btnsimpan() throws InterruptedException {
+        Thread.sleep(1000);
+        btn_simpan.click();
+    }
+
+    public void setInputnama(String inputnama) {
+        this.inputnama.sendKeys(inputnama);
+    }
+
+    public void setInputharga(String inputharga) {
+        this.inputharga.sendKeys(inputharga);
+    }
+
+    public void setInputdiskon(String inputdiskon) {
+        this.inputdiskon.sendKeys(inputdiskon);
+    }
+
+    public void setInputunggul1(String inputunggul1) {
+        this.inputunggul1.sendKeys(inputunggul1);
+    }
+
+    public void setInputunggul2(String inputunggul2) {
+        this.inputunggul2.sendKeys(inputunggul2);
+    }
+
+    public void setInputunggul3(String inputunggul3) {
+        this.inputunggul3.sendKeys(inputunggul3);
+    }
+
+    public void setInputunggul4(String inputunggul4) {
+        this.inputunggul4.sendKeys(inputunggul4);
+    }
+
+    public void setInputunggul5(String inputunggul5) {
+        this.inputunggul5.sendKeys(inputunggul5);
+    }
+
+    public String getTexttambah() {
+        return txtberhasiltambah.getText();
+    }
+
+    public String getTextgagaltambah() {
+        return txtgagaltambah.getText();
+    }
 
 
 

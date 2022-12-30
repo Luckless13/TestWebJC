@@ -3,9 +3,13 @@ package com.juaracoding.cucumber.step_definitions;
 import com.juaracoding.cucumber.pages.BiayaPage;
 import com.juaracoding.cucumber.pages.BlogPage;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 
 public class TestBiaya {
 
@@ -19,87 +23,89 @@ public class TestBiaya {
     }
 // test 1
     @When("User Click menu home")
-    public void user_click_menu_home() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_menu_home() throws InterruptedException {
+        biayaPage.btnhome();
+        extentTest.log(LogStatus.PASS, "User click Menu home");
     }
 
     @When("User Click menu rincian biaya")
-    public void user_click_menu_rincian_biaya() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_menu_rincian_biaya() throws InterruptedException {
+        biayaPage.btnbiaya();
+        extentTest.log(LogStatus.PASS, "User click Menu rincian biaya");
     }
 
     @When("User Click tambah")
-    public void user_click_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_tambah() throws InterruptedException {
+        biayaPage.btntambah();
+        extentTest.log(LogStatus.PASS, "User click tambah");
     }
 
     @When("User Input nama program")
     public void user_input_nama_program() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputnama("Pelatihan akhir tahun");
+        extentTest.log(LogStatus.PASS, "Input nama program");
     }
 
     @When("User Input harga normal")
     public void user_input_harga_normal() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputharga("10000000");
+        extentTest.log(LogStatus.PASS, "Input harga normal");
     }
 
     @When("User Input diskon")
     public void user_input_diskon() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputnama("Pelatihan akhir tahun");
+        extentTest.log(LogStatus.PASS, "Input nama program");
     }
 
     @When("User Input Keunggulan1")
     public void user_input_keunggulan1() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputunggul1("Menambah kepercayaan diri");
+        extentTest.log(LogStatus.PASS, "Input keunggulan 1");
     }
 
     @When("User Input Keunggulan2")
     public void user_input_keunggulan2() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputunggul1("Menguasai lebih dari 1 bahasa");
+        extentTest.log(LogStatus.PASS, "Input keunggulan 2");
     }
 
     @When("User Input Keunggulan3")
     public void user_input_keunggulan3() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputunggul1("Rajin menabung");
+        extentTest.log(LogStatus.PASS, "Input keunggulan 3");
     }
 
     @When("User Input Keunggulan4")
     public void user_input_keunggulan4() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputunggul1("Menambah kepercayaan diri");
+        extentTest.log(LogStatus.PASS, "Input keunggulan 4");
     }
 
     @When("User Input Keunggulan5")
     public void user_input_keunggulan5() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        biayaPage.setInputunggul1("Menambah kepercayaan diri");
+        extentTest.log(LogStatus.PASS, "Input keunggulan 5");
     }
 
     @When("User Select Publish")
-    public void user_select_publish() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_select_publish() throws InterruptedException {
+        biayaPage.setPublish();
+        extentTest.log(LogStatus.PASS, "Select publish");
     }
 
     @When("User Click Simpan")
-    public void user_click_simpan() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_simpan() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        biayaPage.btnsimpan();
+        extentTest.log(LogStatus.PASS, "User click Button Simpan");
     }
 
     @Then("Data telah BerhasiL di tambah")
     public void data_telah_berhasil_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        AssertJUnit.assertEquals(biayaPage.getTexttambah(), "Data berhasil di tambah");
+        extentTest.log(LogStatus.PASS, "data berhasil di tambah tc1");
     }
 
 // test 2

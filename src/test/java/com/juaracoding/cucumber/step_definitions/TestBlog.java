@@ -163,7 +163,6 @@ public class TestBlog {
     @Then("Data BerhasiL di tambah")
     public void data_berhasi_l_di_tambah() {
         AssertJUnit.assertEquals(blogPage.getTextberhasiltambah(), "Data berhasil di tambah");
-        Assert.assertTrue(blogPage.getTextberhasiltambah().contains("Data berhasil di tambah"));
         extentTest.log(LogStatus.PASS, "berhasil di tambah tc05");
     }
 // Test 6
@@ -201,6 +200,7 @@ public class TestBlog {
 
     @Then("Data Tidak BerhasiL di tambah tc006")
     public void data_tidak_berhasi_l_di_tambah_tc006() {
+        AssertJUnit.assertEquals(blogPage.getTextberhasiltambah(), "Data berhasil di tambah");
         extentTest.log(LogStatus.PASS, "berhasil tidak berhasil di tambah tc06");
     }
 // Test 7
