@@ -54,8 +54,8 @@ public class TestBiaya {
 
     @When("User Input diskon")
     public void user_input_diskon() {
-        biayaPage.setInputnama("Pelatihan akhir tahun");
-        extentTest.log(LogStatus.PASS, "Input nama program");
+        biayaPage.setInputdiskon("10");
+        extentTest.log(LogStatus.PASS, "Input diskon");
     }
 
     @When("User Input Keunggulan1")
@@ -232,8 +232,8 @@ public class TestBiaya {
 
     @Then("tc03 Data gagal di tambah")
     public void tc03_data_gagal_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        AssertJUnit.assertEquals(biayaPage.getTextgagalnama(), "Harap isi nama program");
+        extentTest.log(LogStatus.PASS, "data gagal di tambah tc3");
     }
 
 // test 4
@@ -310,10 +310,10 @@ public class TestBiaya {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("tc04 Data BerhasiL di tambah")
-    public void tc04_data_berhasil_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("tc04 Data gagal di tambah")
+    public void tc04_data_gagal_di_tambah() {
+        AssertJUnit.assertEquals(biayaPage.getTextgagalharga(), "Harap isi harga program");
+        extentTest.log(LogStatus.PASS, "data gagal di tambah tc4");
     }
 
 // test 5
@@ -389,10 +389,10 @@ public class TestBiaya {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("tc05 Data BerhasiL di tambah")
-    public void tc05_data_berhasil_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("tc05 Data gagal di tambah")
+    public void tc05_data_gagal_di_tambah() {
+        AssertJUnit.assertEquals(biayaPage.getTextgagalkeunggulan(), "Harap isi keunggulan program");
+        extentTest.log(LogStatus.PASS, "data gagal di tambah tc5");
     }
 
 // test 6
@@ -471,11 +471,11 @@ public class TestBiaya {
 
     @Then("tc06 Data BerhasiL di tambah")
     public void tc06_data_berhasil_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        AssertJUnit.assertEquals(biayaPage.getTexttambah(), "Data berhasil di tambah");
+        extentTest.log(LogStatus.PASS, "data berhasil di tambah tc6");
     }
 
-    // test 7
+// test 7
     @When("tc07 User Click menu home")
     public void tc07_user_click_menu_home() {
         // Write code here that turns the phrase above into concrete actions
@@ -536,13 +536,13 @@ public class TestBiaya {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("tc07 Data gagal di tambah")
-    public void tc07_data_gagal_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("tc07 Data BerhasiL di tambah")
+    public void tc07_data_berhasil_di_tambah() {
+        AssertJUnit.assertEquals(biayaPage.getTexttambah(), "Data berhasil di tambah");
+        extentTest.log(LogStatus.PASS, "data berhasil di tambah tc7");
     }
 
-    // test 8
+// test 8
     @When("tc08 User Click menu home")
     public void tc08_user_click_menu_home() {
         // Write code here that turns the phrase above into concrete actions
@@ -599,8 +599,8 @@ public class TestBiaya {
 
     @Then("tc08 Data gagal di tambah")
     public void tc08_data_gagal_di_tambah() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        AssertJUnit.assertEquals(biayaPage.getTextgagalnama(), "Data gagal di tambah");
+        extentTest.log(LogStatus.FAIL, "data gagal di tambah tc8");
     }
 
 }

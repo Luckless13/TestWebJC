@@ -58,8 +58,13 @@ public class BiayaPage {
     WebElement txtberhasiltambah;
 
     @FindBy(xpath = "//div[@class='invalid-feedback'][normalize-space()='Harap isi nama program']")
-    WebElement txtgagaltambah;
+    WebElement txtgagalnama;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback'][normalize-space()='Harap isi harga program']")
+    WebElement txtgagalharga;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback'][normalize-space()='Harap isi keunggulan program']")
+    WebElement txtgagalkeunggulan;
 
 
     public void btnhome() throws InterruptedException {
@@ -123,8 +128,16 @@ public class BiayaPage {
         return txtberhasiltambah.getText();
     }
 
-    public String getTextgagaltambah() {
-        return txtgagaltambah.getText();
+    public String getTextgagalnama() {
+        return txtgagalnama.getText();
+    }
+
+    public String getTextgagalharga() {
+        return txtgagalharga.getText();
+    }
+
+    public String getTextgagalkeunggulan() {
+        return txtgagalkeunggulan.getText();
     }
 
 
