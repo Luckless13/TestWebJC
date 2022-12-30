@@ -96,7 +96,7 @@ public class SosialMediaPage {
 	 public void clickBtnSimpan(){
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("arguments[0].click();",btnSimpan);
-	        btnSimpan.click();
+//	        btnSimpan.click();
 	    }
 	 public String getTxtUpdate() {
 	    	return txtUpdate.getText();

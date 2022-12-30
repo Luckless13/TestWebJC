@@ -45,56 +45,15 @@ public class TestSosialMedia {
         extentTest.log(LogStatus.PASS, "Berada di page sosial media");
     }
     
-    //test case 2
+   
     
+//test case 2
     @When("Berada di halaman sosial media")
     public void berada_di_halaman_sosial_media() {
     	sosialMediaPage.getTxtSosialMedia();
     	extentTest.log(LogStatus.PASS, "Berada di halaman sosial media");
     }
-    @When("Isi link facebook")
-    public void isi_link_facebook() {
-    	sosialMediaPage.facebook("");
-    	extentTest.log(LogStatus.PASS, "Isi link facebook");
-    }
-    @When("Isi link instagram")
-    public void isi_link_instagram() {
-    	sosialMediaPage.instagram("");
-    	extentTest.log(LogStatus.PASS, "Isi link instagram");
-    }
-    @When("Isi link youtube")
-    public void isi_link_youtube() {
-    	sosialMediaPage.youtube("");
-    	extentTest.log(LogStatus.PASS, "Isi link youtube");
-    }
-    @When("Isi nomor whatsapp")
-    public void isi_nomor_whatsapp() {
-    	sosialMediaPage.whatsapp("");
-    	extentTest.log(LogStatus.PASS, "Isi nomor whatsapp");
-    }
-    @When("Klik button simpan")
-    public void klik_button_simpan() {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
-    	sosialMediaPage.clickBtnSimpan();
-    	extentTest.log(LogStatus.PASS, "Klik button simpan");
-    }
-    @Then("Berhasil disimpan")
-    public void berhasil_disimpan() {
-    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
-    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
-//    	Assert.assertEquals(sosialMediaPage.getTxtSosialMedia(), "Social Media");
-        extentTest.log(LogStatus.PASS, "Berhasil disimpan");
-    }
     
-//test case 3
-    
-    @When("Berada di halaman sosmed ")
-    public void Berada_di_halaman_sosmed () {
-    	sosialMediaPage.getTxtSosialMedia();
-    	extentTest.log(LogStatus.PASS, "Berada di halaman sosmed ");
-    }
     @When("Kosongkan link fb")
     public void Kosongkan_link_fb() {
     	sosialMediaPage.facebookHapus();
@@ -117,6 +76,7 @@ public class TestSosialMedia {
     }
     @When("Klik button simpan fb null")
     public void Klik_button_simpan_fb_null() {
+    	Hooks.delay(2);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
@@ -130,12 +90,7 @@ public class TestSosialMedia {
         extentTest.log(LogStatus.PASS, "Gagal simpan data");
     }
     
-    //Test case 4
-    @When("Berada di halaman sosmed ig null ")
-    public void Berada_di_halaman_sosmed_ig_null() {
-    	sosialMediaPage.getTxtSosialMedia();
-    	extentTest.log(LogStatus.PASS, "Berada di halaman sosmed ig null");
-    }
+    //Test case 3
     @When("Isi link facebook link instagram null")
     public void Isi_link_facebook_link_instagram_null() {
     	sosialMediaPage.facebook("https://8.8.8.8/juaracodig");
@@ -158,6 +113,7 @@ public class TestSosialMedia {
     }
     @When("Klik button simpan link instagram null")
     public void Klik_button_simpan_link_instagram_null() {
+    	Hooks.delay(2);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
@@ -171,12 +127,6 @@ public class TestSosialMedia {
         extentTest.log(LogStatus.PASS, "Gagal simpan data link instagram null");
     }
     
-    //Test case 5
-    @When("Berada di page sosmed yt null ")
-    public void Berada_di_page_sosmed_yt_null() {
-    	sosialMediaPage.getTxtSosialMedia();
-    	extentTest.log(LogStatus.PASS, "Berada di page sosmed yt null");
-    }
     @When("Isi link facebook yt null")
     public void Isi_link_facebook_yt_null() {
     	sosialMediaPage.facebook("");
@@ -199,25 +149,21 @@ public class TestSosialMedia {
     }
     @When("Klik button simpan yt null")
     public void Klik_button_simpan_yt_null() {
+    	Hooks.delay(2);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
     	sosialMediaPage.clickBtnSimpan();
     	extentTest.log(LogStatus.PASS, "Klik button simpan yt null");
     }
-    @Then("GGagal simpan data yt null")
+    @Then("Gagal simpan data yt null")
     public void Gagal_simpan_data_yt_null() {
     	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
     	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
         extentTest.log(LogStatus.PASS, "Gagal simpan data yt null");
     }
     
-  //Test case 6
-    @When("Berada di page sosmed wa null ")
-    public void Berada_di_page_sosmed_wa_null() {
-    	sosialMediaPage.getTxtSosialMedia();
-    	extentTest.log(LogStatus.PASS, "Berada di page sosmed wa null");
-    }
+  //Test case 4
     @When("Isi link facebook wa null")
     public void Isi_link_facebook_wa_null() {
     	sosialMediaPage.facebook("");
@@ -225,7 +171,7 @@ public class TestSosialMedia {
     }
     @When("Isi link instagram wa null")
     public void Isi_link_instagram_wa_null() {
-    	sosialMediaPage.instagram("https://www.instagram.com/juaracoding");
+    	sosialMediaPage.instagram("");
     	extentTest.log(LogStatus.PASS, "Isi link instagram wa null");
     }
     @When("Isi link youtube wa null")
@@ -253,5 +199,42 @@ public class TestSosialMedia {
         extentTest.log(LogStatus.PASS, "Gagal simpan data wa null");
     }
     
-   
+ //test case 5
+    
+    @When("Isi link facebook")
+    public void isi_link_facebook() {
+    	sosialMediaPage.facebook("");
+    	extentTest.log(LogStatus.PASS, "Isi link facebook");
+    }
+    @When("Isi link instagram")
+    public void isi_link_instagram() {
+    	sosialMediaPage.instagram("");
+    	extentTest.log(LogStatus.PASS, "Isi link instagram");
+    }
+    @When("Isi link youtube")
+    public void isi_link_youtube() {
+    	sosialMediaPage.youtube("");
+    	extentTest.log(LogStatus.PASS, "Isi link youtube");
+    }
+    @When("Isi nomor whatsapp")
+    public void isi_nomor_whatsapp() {
+    	sosialMediaPage.whatsapp("081234567890");
+    	extentTest.log(LogStatus.PASS, "Isi nomor whatsapp");
+    }
+    @When("Klik button simpan")
+    public void klik_button_simpan() {
+    	Hooks.delay(2);
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+    	sosialMediaPage.clickBtnSimpan();
+    	extentTest.log(LogStatus.PASS, "Klik button simpan");
+    }
+    @Then("Berhasil disimpan")
+    public void berhasil_disimpan() {
+    	Assert.assertEquals(sosialMediaPage.getTxtUpdate(), "Data berhasil di update");
+    	Assert.assertTrue(sosialMediaPage.getTxtUpdate().contains("Data berhasil di update"));
+//    	Assert.assertEquals(sosialMediaPage.getTxtSosialMedia(), "Social Media");
+        extentTest.log(LogStatus.PASS, "Berhasil disimpan");
+    }
    }
