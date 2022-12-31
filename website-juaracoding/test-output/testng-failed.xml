@@ -6,7 +6,7 @@
       <class name="com.juaracoding.cucumber.step_definitions.RunnerTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="6"/>
+          <include name="runScenario" invocation-numbers="3 4 8 9 10 11"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.juaracoding.cucumber.step_definitions.RunnerTest -->

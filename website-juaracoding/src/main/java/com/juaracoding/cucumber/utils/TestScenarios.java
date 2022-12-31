@@ -11,7 +11,10 @@ public enum TestScenarios {
 	T8 ("Kosongkan nomor whatsapp"),
 	T9 ("Menambahkan akun sosial media"),
 	T10("Tampilan form about"),
-	T11("Tambah data trainer baru");
+	T11("Kosongkan file foto"),
+	T12("Kosongkan nama trainer"),
+//	T13("Jenis file foto yang berbeda"),
+	T13("Kosongkan jabatan trainer");
 	
 
     private String testName;

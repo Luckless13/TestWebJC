@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(tags = "",
         features = {
         		"src/main/resources/features/01.Login.feature",
-        		"src/main/resources/features/2.SosialMedia.feature"},
-//        		"src/main/resources/features/3.About.feature"},
+        		"src/main/resources/features/2.SosialMedia.feature",
+        		"src/main/resources/features/3.About.feature"},
         glue = "com.juaracoding.cucumber.step_definitions",
         plugin = {"pretty","html:target/cucumber-reports.html","json:target/cucumber.json"})
 public class RunnerTest extends AbstractTestNGCucumberTests {

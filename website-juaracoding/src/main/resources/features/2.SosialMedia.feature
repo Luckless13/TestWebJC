@@ -5,7 +5,7 @@ Scenario: Tampilan form sosial media
 			And Klik home
 			And Klik sosial media
 			Then Berada di page sosial media
-#3
+#2
 Scenario: Kosongkan link facebook
       When Berada di halaman sosial media
 			And Kosongkan link fb
@@ -14,7 +14,7 @@ Scenario: Kosongkan link facebook
 			And Isi nomor whatsapp link fb null
 			And Klik button simpan fb null
 			Then Gagal simpan data
-		
+#3		
 Scenario: Kosongkan link instagram
 			When Isi link facebook link instagram null
 			And Kosongkan link instagram
@@ -22,7 +22,7 @@ Scenario: Kosongkan link instagram
 			And Isi nomor whatsapp link instagram null
 			And Klik button simpan link instagram null
 			Then Gagal simpan data link instagram null
-		
+#4		
 Scenario: Kosongkan link youtube
 			When Isi link facebook yt null
 			And Isi link instagram yt null
@@ -30,7 +30,7 @@ Scenario: Kosongkan link youtube
 			And Isi nomor whatsapp yt null
 			And Klik button simpan yt null
 			Then Gagal simpan data yt null
-			
+#5			
 Scenario: Kosongkan nomor whatsapp
 			When Isi link facebook wa null
 			And Isi link instagram wa null
@@ -39,7 +39,7 @@ Scenario: Kosongkan nomor whatsapp
 			And Klik button simpan wa null
 			Then Gagal simpan data wa null
 			
-#2		
+#6	
 Scenario: Menambahkan akun sosial media
 			When Isi link facebook
 			And Isi link instagram

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 30 20:29:31 WIB 2022</td>
+<td>Started on:</td><td>Sat Dec 31 14:55:20 WIB 2022</td>
 </tr>
-<tr><td>Total time:</td><td>44 seconds (44310 ms)</td>
+<tr><td>Total time:</td><td>70 seconds (70306 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,170 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan link youtube", "Form sosial media"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.juaracoding.cucumber.step_definitions.TestSosialMedia.Gagal_simpan_data_yt_null(TestSosialMedia.java:164)
+	at ✽.Gagal simpan data yt null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/2.SosialMedia.feature:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace759564454", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace759564454'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.juaracoding.cucumber.step_definitions.TestSosialMedia.Gagal_simpan_data_yt_null(TestSosialMedia.java:164)
+	at ✽.Gagal simpan data yt null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/2.SosialMedia.feature:32)
+</pre></div></td>
+<td>4</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan nama trainer", "Form about"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.gagal_menambahkan_trainer_nama_null(TestAbout.java:132)
+	at ✽.Gagal menambahkan trainer nama null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace658135690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace658135690'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.gagal_menambahkan_trainer_nama_null(TestAbout.java:132)
+	at ✽.Gagal menambahkan trainer nama null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:25)
+</pre></div></td>
+<td>3</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan jabatan trainer", "Form about"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1142, 755)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;MOUSE&apos;, ip: &apos;192.168.100.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 264c2e015f4f4c8698836ed4ec1070fb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at com.juaracoding.cucumber.pages.AboutPage.klikBtnSimpan(AboutPage.java:103)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.klik_simpan_jabatan_null(TestAbout.java:204)
+	at ✽.Klik simpan jabatan null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1561005241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1561005241'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1142, 755)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;MOUSE&apos;, ip: &apos;192.168.100.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 264c2e015f4f4c8698836ed4ec1070fb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at com.juaracoding.cucumber.pages.AboutPage.klikBtnSimpan(AboutPage.java:103)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.klik_simpan_jabatan_null(TestAbout.java:204)
+	at ✽.Klik simpan jabatan null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:43)
+</pre></div></td>
+<td>4</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan file foto", "Form about"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.Gagal_simpan(TestAbout.java:92)
+	at ✽.Gagal simpan(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1110618954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1110618954'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.Gagal_simpan(TestAbout.java:92)
+	at ✽.Gagal simpan(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:16)
+</pre></div></td>
+<td>7</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan link instagram", "Form sosial media"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.juaracoding.cucumber.step_definitions.TestSosialMedia.Gagal_simpan_data_link_instagram_null(TestSosialMedia.java:127)
+	at ✽.Gagal simpan data link instagram null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/2.SosialMedia.feature:24)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1138356642", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1138356642'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.juaracoding.cucumber.step_definitions.TestSosialMedia.Gagal_simpan_data_link_instagram_null(TestSosialMedia.java:127)
+	at ✽.Gagal simpan data link instagram null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/2.SosialMedia.feature:24)
+</pre></div></td>
+<td>4</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan profile trainer", "Form about"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.gagal_menambahkan_trainer_profile_null(TestAbout.java:247)
+	at ✽.Gagal menambahkan trainer profile null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:53)
+</pre></div><a href='#' onClick='toggleBox("stack-trace734518153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace734518153'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.juaracoding.cucumber.step_definitions.TestAbout.gagal_menambahkan_trainer_profile_null(TestAbout.java:247)
+	at ✽.Gagal menambahkan trainer profile null(file:///C:/Users/HP/eclipse-workspace/TestWebJC/website-juaracoding/src/main/resources/features/3.About.feature:53)
+</pre></div></td>
+<td>4</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,7 +241,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tampilan form sosial media", "Form sosial media"</td>
 <td></td>
-<td>2</td>
+<td>1</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 <tr>
 <td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan link facebook", "Form sosial media"</td>
@@ -85,29 +249,29 @@ function toggleAllBoxes() {
 <td>4</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 <tr>
-<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menambahkan akun sosial media", "Form sosial media"</td>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan nomor whatsapp", "Form sosial media"</td>
 <td></td>
 <td>4</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 <tr>
 <td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User valid login", "Login User"</td>
 <td></td>
-<td>13</td>
+<td>10</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 <tr>
-<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan link youtube", "Form sosial media"</td>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah data trainer baru", "Form about"</td>
 <td></td>
-<td>5</td>
+<td>7</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 <tr>
-<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan link instagram", "Form sosial media"</td>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menambahkan akun sosial media", "Form sosial media"</td>
+<td></td>
+<td>3</td>
+<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
+<tr>
+<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tampilan form about", "Form about"</td>
 <td></td>
 <td>4</td>
-<td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
-<tr>
-<td title='com.juaracoding.cucumber.step_definitions.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.juaracoding.cucumber.step_definitions.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Kosongkan nomor whatsapp", "Form sosial media"</td>
-<td></td>
-<td>2</td>
 <td>com.juaracoding.cucumber.step_definitions.RunnerTest@1afd44cb</td></tr>
 </table><p>
 </body>
