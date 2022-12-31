@@ -20,8 +20,6 @@ public class BlogPage {
     @FindBy(xpath = "//span[normalize-space()='Blog']")
     WebElement btn_blog;
 
-    @FindBy(xpath= "//li[6]//a[1]//*[name()='svg']//*[name()='line'][3]")
-    WebElement btn_blog2;
 
     @FindBy(linkText = "Blog")
     WebElement btn_blog3;
@@ -50,7 +48,16 @@ public class BlogPage {
     @FindBy(xpath = "//alert[@class='alert alert-success']")
     WebElement txtberhasiltambah;
 
-    @FindBy(xpath = "//span[@aria-hidden='true']")
+    @FindBy(xpath = "//div[normalize-space()='Harap isi judul']")
+    WebElement txtgagaljudul;
+
+    @FindBy(xpath = "//div[normalize-space()='Harap isi content perview']")
+    WebElement txtgagalcontent1;
+
+    @FindBy(xpath = "//div[normalize-space()='Harap isi content blog']")
+    WebElement txtgagalcontent2;
+
+    @FindBy(xpath = "//a[normalize-space()='3']")
     WebElement pagenumber;
 
     @FindBy(xpath = "//input[@name='uploadedFile']")
@@ -59,11 +66,14 @@ public class BlogPage {
     @FindBy(xpath = "//input[@id='judul']")
     WebElement inputjudul;
 
-    @FindBy(id = "exampleFormControlSelect9")
-    WebElement selectPublish;
+//    @FindBy(id = "exampleFormControlSelect9")
+//    WebElement selectPublish;
 
-    @FindBy(name ="set_top")
-    WebElement selectsettohome;
+    @FindBy(xpath = "//*[@id=\"exampleFormControlSelect9\"]")
+    WebElement publish;
+
+    @FindBy(name = "set_top")
+    WebElement settohome;
 
     @FindBy(xpath = "//textarea[@name='body_preview']")
     WebElement inputcontent1;
@@ -71,7 +81,8 @@ public class BlogPage {
     @FindBy(xpath = "//div[@role='textbox']")
     WebElement inputcontent2;
 
-
+    @FindBy(xpath = "//li[@class='active page-item']")
+    WebElement activepage;
 
 
     public void btnblog() throws InterruptedException {
@@ -79,10 +90,6 @@ public class BlogPage {
         btn_blog.click();
     }
 
-    public void btnblog2() throws InterruptedException {
-        Thread.sleep(1000);
-        btn_blog2.click();
-    }
 
     public void btnblog3() throws InterruptedException {
         Thread.sleep(1000);
@@ -108,6 +115,20 @@ public class BlogPage {
 
     public String getTexttambah() {
         return txttambah.getText();
+    }
+
+    public String gettxtgagaljudul() {
+        return txtgagaljudul.getText();
+    }
+
+    public String gettxtgagalcontent1() throws InterruptedException {
+        Thread.sleep(2000);
+        return txtgagalcontent1.getText();
+    }
+
+    public String gettxtgagalcontent2() throws InterruptedException {
+        Thread.sleep(2000);
+        return txtgagalcontent2.getText();
     }
 
     public String getTextberhasiltambah() {
@@ -146,14 +167,26 @@ public class BlogPage {
         this.inputjudul.clear();
     }
 
-    public void setselectPublish(int index) throws InterruptedException {
+//    public void setselectPublish(int index) throws InterruptedException {
+//        Thread.sleep(1000);
+//        selectPublish.click();
+//    }
+
+    public void selectPublish(int index) throws InterruptedException {
         Thread.sleep(1000);
-        selectPublish.click();
+        Select selectedPublish = new Select(publish);
+        selectedPublish.selectByIndex(index);
     }
 
-    public void setselecttohome(int index) throws InterruptedException {
+    public void selecttohome(int index) throws InterruptedException {
         Thread.sleep(1000);
-        selectsettohome.click();
+        Select selectedtohome = new Select(settohome);
+        selectedtohome.selectByIndex(index);
+    }
+
+    public String getActivePage() {
+        return activepage.getAttribute("class");
+//			return nextpage.getText();
     }
 
     public void setInputcontent1(String inputcontent1) {
@@ -169,9 +202,8 @@ public class BlogPage {
         this.inputcontent2.sendKeys(inputcontent2);
 
     }
+
     public void content2Hapus() {
         this.inputcontent2.clear();
     }
-
-
 }

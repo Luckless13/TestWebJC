@@ -13,7 +13,7 @@ public enum TestScenarios {
     T9("TCC Blog 004 Menu tambah Blog invalid"),
     T10("TCC Blog 005 Menu tambah Blog invalid"),
     T11("TCC Blog 006 Menu tambah Blog invalid"),
-    T12("TCC Blog 007 Menu tambah Blog invalid"),
+    T12("TCC Blog 007 Menu edit Blog invalid"),
     T13("TC001 Menambah data rincian biaya"),
     T14("TC002 Menambah data rincian biaya"),
     T15("TC003 Menambah data rincian biaya"),

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class BiayaPage {
 
@@ -36,7 +37,7 @@ public class BiayaPage {
     @FindBy(id = "diskonid")
     WebElement inputdiskon;
 
-    @FindBy(id = "exampleFormControlSelect9")
+    @FindBy(xpath = "//*[@id=\"exampleFormControlSelect9\"]")
     WebElement publish;
 
     @FindBy(name = "keunggulan1")
@@ -82,9 +83,10 @@ public class BiayaPage {
         btn_tambah.click();
     }
 
-    public void setPublish() throws InterruptedException {
+    public void selectPublish(int index) throws InterruptedException {
         Thread.sleep(1000);
-        publish.click();
+        Select selectedPublish = new Select(publish);
+        selectedPublish.selectByIndex(index);
     }
 
     public void btnsimpan() throws InterruptedException {
