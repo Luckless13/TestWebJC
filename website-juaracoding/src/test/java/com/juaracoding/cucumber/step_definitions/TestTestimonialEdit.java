@@ -61,9 +61,10 @@ public class TestTestimonialEdit {
 	    }
 
 	    @Then("Edit Testimonial nama null credential")
-	    public void edit_testimonial_nama_null_credential() {
+	    public void edit_testimonial_nama_null_credential() throws InterruptedException {
 	    	JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			Thread.sleep(2000);
 	    	AssertJUnit.assertEquals(testimonialPage.getNamaAlert(), "Nama Wajib diisi");
 	    	Assert.assertTrue(testimonialPage.getNamaAlert().contains("Nama Wajib diisi"));
 	    	extentTest.log(LogStatus.PASS, "Gagal edit testimonial, Nama Peserta kosong");
@@ -150,49 +151,55 @@ public class TestTestimonialEdit {
 	    }
 
 //		TestCase 5
-//	    @When("Input nama peserta baru")
-//	    public void input_nama_peserta_baru() throws InterruptedException {
-//	    	driver.navigate().back();
-//			driver.navigate().refresh();
-//			JavascriptExecutor js = (JavascriptExecutor) driver;
-//			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-//			testimonialPage.ClearNama();
-//	    	testimonialPage.EditNama("Test 14");
-//	    	extentTest.log(LogStatus.PASS, "Edit Nama Peserta");
-//	    }
+	    @When("Input nama peserta baru")
+	    public void input_nama_peserta_baru() throws InterruptedException {
+	    	driver.navigate().back();
+			driver.navigate().refresh();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			testimonialPage.ClearNama();
+	    	testimonialPage.EditNama("Test 14");
+	    	extentTest.log(LogStatus.PASS, "Edit Nama Peserta");
+	    }
 
-//	    @When("Select publish status baru")
-//	    public void select_publish_status_baru() throws InterruptedException {
-//	    	testimonialPage.EditPublish(2);
-//	    	extentTest.log(LogStatus.PASS, "Select publish status");
-//	    }
-//
-//	    @When("Input isi testimonial baru")
-//	    public void input_isi_testimonial_baru() throws InterruptedException {
-//	    	testimonialPage.ClearContent();
-//	    	testimonialPage.EditContent("Cukup");
-//	    	extentTest.log(LogStatus.PASS, "Edit Isi Testimonial");
-//	    }
-//
-//	    @When("Select rating baru")
-//	    public void select_rating_baru() throws InterruptedException {
-//	    	testimonialPage.EditRating(4);
-//	    	extentTest.log(LogStatus.PASS, "Select rating");
-//	    }
-//
-//	    @When("Click simpan")
-//	    public void click_simpan() throws InterruptedException {
-//	    	JavascriptExecutor js = (JavascriptExecutor) driver;
-//			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-//	    	testimonialPage.clickBtnSimpan();
-//	    	extentTest.log(LogStatus.PASS, "Click button simpan");
-//	    }
-//
-//	    @Then("Edit Testimonial credential")
-//	    public void edit_testimonial_credential() {
-//	    	AssertJUnit.assertEquals(testimonialPage.getTxtTestimonial(), "List Testimonial");
-//	    	Assert.assertTrue(testimonialPage.getTxtTestimonial().contains("List Testimonial"));
-//	    	extentTest.log(LogStatus.PASS, "Berhasil edit testimonial");
-//	    }      
+	    @When("Click pilih gambar baru")
+	    public void click_pilih_gambar_baru() throws InterruptedException {
+			testimonialPage.clickBtnPilihGambarUlang("C:\\Users\\Lenovo\\Downloads\\maven.png");
+	    	extentTest.log(LogStatus.PASS, "Click Pilih Gambar Ulang, alu pilih file pdf");
+	    }
+	    
+	    @When("Select publish status baru")
+	    public void select_publish_status_baru() throws InterruptedException {
+	    	testimonialPage.EditPublish(2);
+	    	extentTest.log(LogStatus.PASS, "Select publish status");
+	    }
+
+	    @When("Input isi testimonial baru")
+	    public void input_isi_testimonial_baru() throws InterruptedException {
+	    	testimonialPage.ClearContent();
+	    	testimonialPage.EditContent("Cukup");
+	    	extentTest.log(LogStatus.PASS, "Edit Isi Testimonial");
+	    }
+
+	    @When("Select rating baru")
+	    public void select_rating_baru() throws InterruptedException {
+	    	testimonialPage.EditRating(4);
+	    	extentTest.log(LogStatus.PASS, "Select rating");
+	    }
+
+	    @When("Click simpan")
+	    public void click_simpan() throws InterruptedException {
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	    	testimonialPage.clickBtnSimpan();
+	    	extentTest.log(LogStatus.PASS, "Click button simpan");
+	    }
+
+	    @Then("Edit Testimonial credential")
+	    public void edit_testimonial_credential() {
+	    	AssertJUnit.assertEquals(testimonialPage.getTxtTestimonial(), "List Testimonial");
+	    	Assert.assertTrue(testimonialPage.getTxtTestimonial().contains("List Testimonial"));
+	    	extentTest.log(LogStatus.PASS, "Berhasil edit testimonial");
+	    }      
 
 }

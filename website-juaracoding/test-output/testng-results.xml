@@ -1,91 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-29T03:59:20 WIB" name="Default suite" finished-at="2022-12-29T04:00:15 WIB" duration-ms="54821">
+  <suite started-at="2023-01-01T23:51:05 WIB" name="Default suite" finished-at="2023-01-01T23:52:34 WIB" duration-ms="88625">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-29T03:59:20 WIB" name="Default test" finished-at="2022-12-29T04:00:15 WIB" duration-ms="54821">
+    <test started-at="2023-01-01T23:51:05 WIB" name="Default test" finished-at="2023-01-01T23:52:34 WIB" duration-ms="88625">
       <class name="com.juaracoding.cucumber.step_definitions.RunnerTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T03:59:20 WIB" name="setUpClass" finished-at="2022-12-29T03:59:21 WIB" duration-ms="1188" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:05 WIB" name="setUpClass" finished-at="2023-01-01T23:51:06 WIB" duration-ms="1049" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@318c68d5]]>
+                <![CDATA[org.testng.TestRunner@31e739bf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T03:59:21 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-29T03:59:47 WIB" duration-ms="25816" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:51:38 WIB" duration-ms="32039" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Edit Testimonial nama null"]]>
+                <![CDATA["Edit program null"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testimonial Edit"]]>
+                <![CDATA["Edit Program"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T03:59:47 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-29T03:59:51 WIB" duration-ms="3870" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:38 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:51:46 WIB" duration-ms="7411" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Edit Testimonial isi testimoninal null"]]>
+                <![CDATA["Edit program nama program null"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testimonial Edit"]]>
+                <![CDATA["Edit Program"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T03:59:51 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-29T03:59:56 WIB" duration-ms="5168" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:46 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:51:53 WIB" duration-ms="7467" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Edit Testimonial nama dan isi testimoial null"]]>
+                <![CDATA["Edit program harga normal null"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testimonial Edit"]]>
+                <![CDATA["Edit Program"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T03:59:56 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-29T04:00:07 WIB" duration-ms="10753" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:51:59 WIB" duration-ms="5722" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Edit Testimonial"]]>
+                <![CDATA["Edit program keunggulan1 null"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testimonial Edit"]]>
+                <![CDATA["Edit Program"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2022-12-29T04:00:07 WIB" name="tearDownClass" finished-at="2022-12-29T04:00:15 WIB" duration-ms="7937" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:51:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:52:06 WIB" duration-ms="7113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit program keunggulan2 null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Program"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:52:06 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:52:12 WIB" duration-ms="5696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit program keunggulan3 null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Program"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:52:12 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:52:18 WIB" duration-ms="6234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit program keunggulan4 null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Program"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:52:18 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:52:24 WIB" duration-ms="5691" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit program keunggulan5 null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Program"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:52:24 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T23:52:29 WIB" duration-ms="5888" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit program diskon null"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Program"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.cucumber.step_definitions.RunnerTest@a530d0a]" started-at="2023-01-01T23:52:29 WIB" name="tearDownClass" finished-at="2023-01-01T23:52:34 WIB" duration-ms="4226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

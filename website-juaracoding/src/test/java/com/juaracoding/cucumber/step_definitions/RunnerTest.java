@@ -7,8 +7,9 @@ import io.cucumber.testng.CucumberOptions;
         features = {
 //        		"src/main/resources/features/03.Testimonial.feature",
 //        		"src/main/resources/features/04.TestimonialSearch.feature",
-        		"src/main/resources/features/05.TestimonialEdit.feature",
-//        		"src/main/resources/features/07.RincianBiayaSearch.feature"
+//        		"src/main/resources/features/05.TestimonialEdit.feature",
+//        		"src/main/resources/features/07.RincianBiayaSearch.feature",
+        		"src/main/resources/features/08.RincianBiayaEdit.feature"
         		},
         glue = "com.juaracoding.cucumber.step_definitions",
         plugin = {"pretty","html:target/cucumber-reports.html","json:target/cucumber.json"})

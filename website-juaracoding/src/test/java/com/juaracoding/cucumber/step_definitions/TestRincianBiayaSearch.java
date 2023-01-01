@@ -165,7 +165,7 @@ public class TestRincianBiayaSearch {
 		driver.navigate().back();
 		driver.navigate().refresh();
 		rincianbiayaPage.selectOpsi(1);
-    	extentTest.log(LogStatus.PASS, "Select rating");
+    	extentTest.log(LogStatus.PASS, "Select Harga-Normal");
 	}
 	@When("Input harga normal null")
 	public void input_harga_normal_null() throws InterruptedException {
@@ -202,13 +202,9 @@ public class TestRincianBiayaSearch {
 	public void Search_harga_program_huruf_credential() {
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-//		AssertJUnit.assertEquals(rincianbiayaPage.getProgramyangdicari(), "Pelatihan Bagus");
-//    	Assert.assertTrue(rincianbiayaPage.getProgramyangdicari().contains("Pelatihan Bagus"));
-//		extentTest.log(LogStatus.PASS, "Program ditemukan");
-//		extentTest.log(LogStatus.FAIL, "Program tidak ditemukan");
-		AssertJUnit.assertEquals(rincianbiayaPage.getTxtData(), "Data Rincian Biaya");
-    	Assert.assertTrue(rincianbiayaPage.getTxtData().contains("Data Rincian Biaya"));
-    	extentTest.log(LogStatus.PASS, "Program ditemukan");
+		AssertJUnit.assertEquals(rincianbiayaPage.getTxtZero(), "Total Search : 0 Data");
+    	Assert.assertTrue(rincianbiayaPage.getTxtZero().contains("Total Search : 0 Data"));
+    	extentTest.log(LogStatus.PASS, "Program tidak ditemukan");
 	}
 	
 //	TC9
@@ -231,5 +227,141 @@ public class TestRincianBiayaSearch {
 		AssertJUnit.assertEquals(rincianbiayaPage.getProgramyangdicari(), "Pelatihan Bagus");
     	Assert.assertTrue(rincianbiayaPage.getProgramyangdicari().contains("Pelatihan Bagus"));
 		extentTest.log(LogStatus.PASS, "Nama Program ditemukan");
+	}
+	
+//	TC10
+	@When("Select diskon")
+	public void Select_diskon() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+		rincianbiayaPage.selectOpsi(2);
+    	extentTest.log(LogStatus.PASS, "Select Diskon");
+	}
+	@When("Input diskon null")
+	public void input_diskon_null() throws InterruptedException {
+		rincianbiayaPage.Search("");
+    	extentTest.log(LogStatus.PASS, "Input diskon null");
+	}
+	@When("Enter diskon null")
+	public void enter_diskon_null() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search diskon null credential")
+	public void search_diskon_null_credential() {
+		AssertJUnit.assertEquals(rincianbiayaPage.getTxtData(), "Data Rincian Biaya");
+    	Assert.assertTrue(rincianbiayaPage.getTxtData().contains("Data Rincian Biaya"));
+    	extentTest.log(LogStatus.PASS, "Diskon kosong, Kembali ke page Data Rincian Biaya");
+	}
+	
+//	TC11
+	@When("Input diskon huruf")
+	public void input_diskon_huruf() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+		rincianbiayaPage.Search("Sepuluh");
+    	extentTest.log(LogStatus.PASS, "Input diskon huruf");
+	}
+	@When("Enter diskon huruf")
+	public void enter_diskon_huruf() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search diskon huruf credential")
+	public void search_diskon_huruf_credential() {
+		AssertJUnit.assertEquals(rincianbiayaPage.getTxtZero(), "Total Search : 0 Data");
+    	Assert.assertTrue(rincianbiayaPage.getTxtZero().contains("Total Search : 0 Data"));
+    	extentTest.log(LogStatus.PASS, "Program tidak ditemukan");
+	}
+	
+//	TC12
+	@When("Input diskon")
+	public void input_diskon() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+		Thread.sleep(1000);
+		rincianbiayaPage.Search("51");
+    	extentTest.log(LogStatus.PASS, "Input diskon");
+	}
+	@When("Enter diskon")
+	public void enter_diskon() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search diskon credential")
+	public void search_diskon_credential() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		AssertJUnit.assertEquals(rincianbiayaPage.getProgramyangdicari(), "Pelatihan Bagus");
+    	Assert.assertTrue(rincianbiayaPage.getProgramyangdicari().contains("Pelatihan Bagus"));
+		extentTest.log(LogStatus.PASS, "Program ditemukan");
+	}
+	
+//	TC13
+	@When("Select harga diskon")
+	public void Select_harga_diskon() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+		rincianbiayaPage.selectOpsi(3);
+    	extentTest.log(LogStatus.PASS, "Select Diskon");
+	}
+	@When("Input harga diskon null")
+	public void input_harga_diskon_null() throws InterruptedException {
+		rincianbiayaPage.Search("");
+    	extentTest.log(LogStatus.PASS, "Input harga diskon null");
+	}
+	@When("Enter harga diskon null")
+	public void enter_harga_diskon_null() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search harga diskon null credential")
+	public void search_harga_diskon_null_credential() {
+		AssertJUnit.assertEquals(rincianbiayaPage.getTxtData(), "Data Rincian Biaya");
+    	Assert.assertTrue(rincianbiayaPage.getTxtData().contains("Data Rincian Biaya"));
+    	extentTest.log(LogStatus.PASS, "Harga Diskon kosong, Kembali ke page Data Rincian Biaya");
+	}
+	
+//	TC14
+	@When("Input harga diskon huruf")
+	public void input_harga_diskon_huruf() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+		rincianbiayaPage.Search("Sepuluh");
+    	extentTest.log(LogStatus.PASS, "Input harga diskon huruf");
+	}
+	@When("Enter harga diskon huruf")
+	public void enter_harga_diskon_huruf() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search harga diskon huruf credential")
+	public void search_harga_diskon_huruf_credential() {
+		AssertJUnit.assertEquals(rincianbiayaPage.getTxtZero(), "Total Search : 0 Data");
+    	Assert.assertTrue(rincianbiayaPage.getTxtZero().contains("Total Search : 0 Data"));
+    	extentTest.log(LogStatus.PASS, "Program tidak ditemukan");
+	}
+	
+//	TC15
+	@When("Input harga diskon")
+	public void input__diskon() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+//		rincianbiayaPage.selectOpsi(3);
+		rincianbiayaPage.Search("4900000");
+    	extentTest.log(LogStatus.PASS, "Input harga diskon");
+	}
+	@When("Enter harga diskon")
+	public void enter_harga_diskon() throws InterruptedException {
+		rincianbiayaPage.Enter();
+		extentTest.log(LogStatus.PASS, "Tekan Enter");
+	}
+	@Then("Search harga diskon credential")
+	public void search_harga_diskon_credential() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		AssertJUnit.assertEquals(rincianbiayaPage.getProgramyangdicari(), "Pelatihan Bagus");
+    	Assert.assertTrue(rincianbiayaPage.getProgramyangdicari().contains("Pelatihan Bagus"));
+		extentTest.log(LogStatus.PASS, "Program ditemukan");
 	}
 }

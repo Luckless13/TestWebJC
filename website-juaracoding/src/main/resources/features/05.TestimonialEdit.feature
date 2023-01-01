@@ -13,7 +13,7 @@ Feature: Testimonial Edit
 	And Click simpan isi testimoninal null
   Then Edit Testimonial isi testimoninal null credential
   
-  3
+  #3
   Scenario: Edit Testimonial nama dan isi testimoial null
 	When Input nama dan isi testimoial null
 	And Click simpan nama dan isi testimoial null
@@ -26,11 +26,12 @@ Feature: Testimonial Edit
   Then Edit Testimonial foto pdf credential
   
   #5
-#	Scenario: Edit Testimonial
-#	When Input nama peserta baru
-  #And Select publish status baru
-  #And Input isi testimonial baru
-  #And Select rating baru
-#	And Click simpan
-  #Then Edit Testimonial credential
+	Scenario: Edit Testimonial
+	When Input nama peserta baru
+	And Click pilih gambar baru
+  And Select publish status baru
+  And Input isi testimonial baru
+  And Select rating baru
+	And Click simpan
+  Then Edit Testimonial credential
   

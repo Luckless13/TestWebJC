@@ -57,40 +57,40 @@ Feature: Search Program
   Then Search harga normal credential
   
   #10
-  #Scenario: Search diskon null
-  #When Select diskon
-  #And Input diskon null
-  #And Enter diskon null
-  #Then Search diskon null credential
-  #
+  Scenario: Search diskon null
+  When Select diskon
+  And Input diskon null
+  And Enter diskon null
+  Then Search diskon null credential
+  
   #11
-  #Scenario: Search diskon huruf
-  #When  Input diskon huruf
-  #And Enter diskon huruf
-  #Then Search diskon null credential
-  #
+  Scenario: Search diskon huruf
+  When  Input diskon huruf
+  And Enter diskon huruf
+  Then Search diskon null credential
+  
   #12
-  #Scenario: Search diskon
-  #When  Input diskon
-  #And Enter diskon
-  #Then Search diskon credential
-  #
+  Scenario: Search diskon
+  When  Input diskon
+  And Enter diskon
+  Then Search diskon credential
+  
   #13
-#Scenario: Search harga diskon null
-  #When Select harga diskon
-  #And Input harga diskon null
-  #And Enter harga diskon null
-  #Then Search harga diskon null credential
-  #
+	Scenario: Search harga diskon null
+  When Select harga diskon
+  And Input harga diskon null
+  And Enter harga diskon null
+  Then Search harga diskon null credential
+  
   #14
-  #Scenario: Search harga diskon huruf
-  #When  Input harga diskon huruf
-  #And Enter harga diskon huruf
-  #Then Search harga diskon null credential
-  #
+  Scenario: Search harga diskon huruf
+  When  Input harga diskon huruf
+  And Enter harga diskon huruf
+  Then Search harga diskon null credential
+  
   #15
-  #Scenario: Search harga diskon
-  #When  Input harga diskon
-  #And Enter harga diskon
-  #Then Search harga diskon credential
+  Scenario: Search harga diskon
+  When  Input harga diskon
+  And Enter harga diskon
+  Then Search harga diskon credential
  

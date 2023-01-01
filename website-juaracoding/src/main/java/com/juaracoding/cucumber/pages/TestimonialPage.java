@@ -85,7 +85,7 @@ public class TestimonialPage {
 	    @FindBy(xpath = "//input[@id='filename']")
 	    WebElement namafoto;
 	    
-	    @FindBy(xpath = "//input[@value='Pilih Gambar Ulang']")
+	    @FindBy(xpath = "//input[@id='uploadedFile']")
 	    WebElement editfoto;
 	    
 	    @FindBy(xpath = "//select[@id='exampleFormControlSelect9']")
