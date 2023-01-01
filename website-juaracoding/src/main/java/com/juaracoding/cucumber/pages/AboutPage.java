@@ -1,6 +1,7 @@
 package com.juaracoding.cucumber.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,15 +45,45 @@ public class AboutPage {
 	@FindBy (xpath = "//select[@id='exampleFormControlSelect9']")
 	WebElement publish;
 	
-	@FindBy (xpath = "//input[@name='mysubmit']")
+	@FindBy (xpath = "//input[@name='mysubmit']") 
 	WebElement btnSimpan;
 	
 	@FindBy (xpath = "//alert[@class='alert alert-success']")
 	WebElement txtSuccess;
 	
-	@FindBy (xpath = "//h1[normalize-space()='CodeIgniter\\Images\\Exceptions\\ImageException']")
+	@FindBy (xpath = "//div[@class='header']//p[1]")
 	WebElement txtFotoPdf;
 	
+	@FindBy(xpath = "//input[@placeholder='Search Nama Peserta']")
+	WebElement search;
+	
+	@FindBy(xpath = "//a[normalize-space()='2']")
+	WebElement pageNumber;
+	
+	@FindBy(xpath ="//p[normalize-space()='913']")
+	WebElement trainerEdit;
+	
+	@FindBy(xpath = "//h4[@class='card-title mb-0']")
+	WebElement txtEdit;
+	
+	@FindBy(xpath = "//input[@value='Pilih Gambar Ulang']")
+	WebElement btnUbahFoto;
+	
+	@FindBy (xpath = "//input[@name='mysubmit']")
+	WebElement btnSimpanEdit;
+	
+	@FindBy(xpath = "//h1[normalize-space()='CodeIgniter\\Images\\Exceptions\\ImageException']")
+	WebElement txtFotoPdfEdit;
+	
+	@FindBy(xpath = "//input[@id='filename']")
+	WebElement txtnamaFileFoto;
+	
+	public void isiNamaFile(String inputNamaFile) {
+    	this.txtnamaFileFoto.sendKeys(inputNamaFile);
+    }
+	public void hapusNamaFile() {
+    	this.txtnamaFileFoto.clear();
+    }
 	public String getTxtDashboard() {
     	return txtDashboard.getText();
     }
@@ -61,9 +92,25 @@ public class AboutPage {
 			btnAbout.click();	
 		}
 	 
+	 public void klikBtnEdit(){
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("arguments[0].click();",trainerEdit);
+//		 trainerEdit.click();	
+		}
+	 public String getTxtEdit() {
+	    	return txtEdit.getText();
+	    }
+	 public void klikBtnUbahFoto(String photo) throws InterruptedException {
+		 Thread.sleep(2000);
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("arguments[0].click();",btnUbahFoto);
+		 btnUbahFoto.sendKeys(photo);	
+		}
+	 
 	 public String getTxtTrainer() {
 	    	return txtTrainer.getText();
 	    }
+	 
 	 public void klikBtnTambah(){
 			btnTambah.click();	
 		}
@@ -102,6 +149,11 @@ public class AboutPage {
 //		 js.executeScript("arguments[0].click();",btnSimpan);
 	        btnSimpan.click();
 	    }
+	 public void klikBtnSimpanEdit(){
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("arguments[0].click();",btnSimpan);
+//	        btnSimpanEdit.click();
+	    }
 	 
 	 public String getTxtSuccess() {
 	    	return txtSuccess.getText();
@@ -109,6 +161,9 @@ public class AboutPage {
 	 
 	 public String getTxtFotoPdf() {
 	    	return txtFotoPdf.getText();
+	    }
+	 public String getTxtFotoPdfEdit() {
+	    	return txtFotoPdfEdit.getText();
 	    }
 	 
 	 public String getAttributeRequiredFoto(){ 
@@ -125,4 +180,18 @@ public class AboutPage {
 	 public String getAttributeRequiredProfile(){ 
 		 return profile.getAttribute("required");
 	 }
+	 
+	 public void setSearch(String search) {
+	        this.search.sendKeys(search, Keys.ENTER);
+	 }
+	 public void setSearchHapus() {
+	        this.search.clear();
+	 }
+	 
+	 public void setPagenumber() throws InterruptedException  {
+		 Thread.sleep(2000);
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("arguments[0].click();",pageNumber);
+//	        pageNumber.click();
+	    }
 }

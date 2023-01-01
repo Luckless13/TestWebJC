@@ -13,8 +13,18 @@ public enum TestScenarios {
 	T10("Tampilan form about"),
 	T11("Kosongkan file foto"),
 	T12("Kosongkan nama trainer"),
-//	T13("Jenis file foto yang berbeda"),
-	T13("Kosongkan jabatan trainer");
+	T13("Jenis file foto yang berbeda"),
+	T14("Kosongkan jabatan trainer"),
+	T15("Search nama peserta tiga huruf depan"),
+	T16("Search nama peserta tiga huruf belakang"),
+	T17("Search nama peserta"),
+	T18("Page grid");
+//	T19("Edit data trainer foto pdf");
+//	T20("Edit data trainer nama null"),
+//	T21("Edit data trainer jabatan null"),
+//	T22("Edit data trainer profile null"),
+//	T23("Edit data trainer lengkap");
+	
 	
 
     private String testName;
