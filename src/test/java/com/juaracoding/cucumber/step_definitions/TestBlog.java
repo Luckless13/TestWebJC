@@ -123,7 +123,7 @@ public class TestBlog {
 
     @And("User Input Judul Blog")
     public void user_input_judul_blog() {
-        blogPage.setInputjudul("test QA jc batch 7 2022");
+        blogPage.setInputjudul("test QA jc batch 7 2022 new year");
         extentTest.log(LogStatus.PASS, "Input judul blog");
     }
 
@@ -141,13 +141,13 @@ public class TestBlog {
 
     @And("User Input Conten Preview")
     public void user_input_conten_preview() {
-        blogPage.setInputcontent1("test QA Jc 2022");
+        blogPage.setInputcontent1("test QA Jc 2022 new year");
         extentTest.log(LogStatus.PASS, "Input Content preview");
     }
 
     @And("User Input Content")
     public void user_input_content() {
-        blogPage.setInputcontent2("test QA jc 2022");
+        blogPage.setInputcontent2("test QA jc 2022 new year");
         extentTest.log(LogStatus.PASS, "Input Content");
     }
 
